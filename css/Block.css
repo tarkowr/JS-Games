@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+    font-family: "Abhaya Libre", Arial, Helvetica, sans-serif;
+}
+p{
+    color: #f44242;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+header{
+    width: 80%;
+    margin: 0 auto;
+    color: #4286f4;
+    font-size: 2em;
+}
+canvas {
+    border: 1px solid grey;
+    background-color: #f1f1f1;
+}
+.styledButton{
+    margin-top: 20px;
+    background-color: #282828;
+    color: white;
+    border: 1px solid #282828;
+    padding: 15px 30px;
+    width: 150px;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.styledButton:hover{
+    background-color: #1f70f2;
+}
+.home{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 36px;
+    z-index: 1;
+    background-color: white;
+    opacity: 1;
+}
+#returnHome{
+    color: #4286f4;
+}
+#returnHome:hover{
+    color: #282828;
+}

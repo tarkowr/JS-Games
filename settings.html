@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Games | Settings</title>
+    <link rel = "icon" href = "media/icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Asap|Abhaya Libre' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel = "stylesheet" href = "css/settings.css">
+</head>
+<body>
+    <header>
+        &mdash; Settings &mdash;
+    </header>
+
+    <div id = "reset">
+        <form id = "reset-form">
+            <p>Reset High Score(s)</p>
+
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "block-easy"> Block (Easy) </label>
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "block-hard"> Block (Hard) </label>
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "block-impossible"> Block (Impossible) </label>
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "block-flappy"> Block (Flappy)</label>
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "nba"> NBA Animation </label>
+            <label class = "score-label"> <input type = "checkbox" class = "highscore" id = "matching"> Matching </label>
+
+            <input type = "submit" id = "submit">
+        </form>
+    </div>
+
+    <div class = "home">
+        <a href = "index.html" id = "returnHome"><i class = "fa fa-home"></i></a>
+    </div>
+
+    <script src = "js/highScore.js"> </script>
+    <script src = "js/settings.js"> </script>
+</body>
+</html>

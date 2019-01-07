@@ -1,0 +1,150 @@
+body{
+    padding: 0;
+    background-color: #E4E4E4;
+    font-family: "Abhaya Libre", Arial, Helvetica, sans-serif;
+}
+header{
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2em;
+}
+main{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #d3d3d3;
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.deck{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+}
+.deck .card{
+    height: 60px;
+    min-width: 40px;
+    flex: 1;
+    margin: 5px;
+    padding: 18px 6px;
+    background-color: #161616;
+    color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 40px;
+}
+.deck .card.open{
+    cursor: default;
+}
+.deck .card.show{
+    color: white;
+}
+.deck .card.match{
+    cursor: default;
+    color: #6AA2FE;
+}
+.deck .card.unmatched{
+    color: #f44242;
+}
+.deck .card.disabled{
+    pointer-events: none;
+}
+#settings{
+    width: 330px;
+    text-align: center;
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.moves, #cards-left{
+    color: red;
+}
+#modal{
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+}
+#box{
+    width: 80%;
+    position: fixed;
+    top: 30%;
+    margin-left: 10%;
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#modalTop{
+    font-size: 32px;
+    color: #4286f4;
+    padding: 10px;
+}
+#stats{
+    font-size: 24px;
+}
+#modal i{
+    font-size: 24px;
+    color: #FF2626;
+}
+#modal i:hover{
+    cursor: pointer;
+}
+#restart{
+    font-size: 18px;
+    width: 150px;
+    height: 40px;
+    background-color: #282828;
+    border: 1px solid #282828;
+    color: white;
+}
+#restart:hover{
+    background-color: #4286f4;
+    border: 1px solid #4286f4;
+}
+#close {
+    color: #FB2323;
+    float: right;
+    font-size: 28px;
+    padding-right: 6px;
+    font-weight: bold;
+}
+#close:hover,#close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.home{
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    padding: 3px 10px;
+    font-size: 36px;
+    z-index: 1;
+    background-color: white;
+    opacity: 1;
+}
+#returnHome{
+    color: #4286f4;
+}
+#returnHome:hover{
+    color: #282828;
+}
