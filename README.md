@@ -1,7 +1,5 @@
 # JS Games
 
-**Created By: Richie Tarkowski**
-
 **This Project Includes Three JavaScript Games:**
 1. Block
 2. NBA Animation
