@@ -1,10 +1,8 @@
 # JS Games
 
-### Created By: Richie Tarkowski
-
-### Includes three JavaScript games:
+**This Project Includes Three JavaScript Games:**
 1. Block
 2. NBA Animation
 3. Matching
 
-### Each game has a high score that is saved in local storage.
+**Each JS game has a High Score, which is saved in HTML Local Storage.**
