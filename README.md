@@ -1,4 +1,6 @@
 # JS Games
+Hosted on Google Firebase!  
+https://games-js.firebaseapp.com/
 
 **This Project Includes Three JavaScript Games:**
 1. Block
