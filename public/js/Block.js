@@ -3,7 +3,7 @@ const GameKeys = Object.freeze({"UP":38, "DOWN":40, "SPACE":32});
 const CanvasWidth = 720;
 const CanvasHeight = 405;
 
-window.onload = function(){
+window.addEventListener("load",function(event) {
     //
     // Game variables
     //
@@ -203,7 +203,6 @@ window.onload = function(){
         document.getElementById("startGameImpossible").style.display = "none";
         document.getElementById("startGameFlappy").style.display = "none";
         document.getElementById("instruction").style.display = "none";
-        document.getElementById("game-info").style.display = "none";
         document.getElementById("exit").style.display = "none";
         document.getElementById("restart").style.display = "none";
     }
@@ -222,7 +221,7 @@ window.onload = function(){
             this.canvas.width = CanvasWidth;
             this.canvas.height = CanvasHeight;
             this.context = this.canvas.getContext("2d");
-            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            document.getElementById("game-board").appendChild(this.canvas);
             this.frameNo = 0; // Count frames
             this.interval = setInterval(updateGameArea, updateGameInterval); // Runs function updateGameArea X times a second
                         
@@ -465,4 +464,4 @@ window.onload = function(){
     function reloadPage(){
         location.reload();
     }
-}
+});

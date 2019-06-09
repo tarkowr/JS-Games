@@ -19,7 +19,6 @@ let cardsRemaining = cards.length;
 
 const complete = cards.length;
 
-
 //
 // Function to shuffle the cards
 //
@@ -39,7 +38,9 @@ function ShuffleCards(array){
 //
 // Start the game on body load
 //
-document.body.onload = StartGame();
+window.addEventListener("load",function(event) {
+    StartGame();
+});
 
 //
 // Start a new game (Setup)

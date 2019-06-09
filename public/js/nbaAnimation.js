@@ -5,7 +5,7 @@ let increment = 10;
 let posX=0, posY=0, score=0;
 
 const keys = Object.freeze({"LEFT":37, "UP":38, "RIGHT":39, "DOWN":40});
-const upperBound = 500, lowerBound = 0, leftBound = 75, rightBound = 900;
+const upperBound = 600, lowerBound = 100, leftBound = 80, rightBound = 900;
 
 //
 // Setup game
@@ -76,14 +76,22 @@ function SetElementPos(el, x, y){
 // Generate random X coordinate
 //
 function GetRandomXCoordinate(el){
-  return Math.floor(Math.random() * (rightBound - leftBound - el.width) + leftBound);
+  let range = rightBound - leftBound - el.width;
+  let random = Math.round((Math.random()* range) + leftBound);
+  let round = Math.floor(random/10)*10;
+
+  return round;
 }
 
 //
 // Generate random y coordinate
 //
 function GetRandomYCoordinate(el){
-  return Math.floor(Math.random() * (upperBound - lowerBound - el.height) + lowerBound);
+  let range = upperBound - lowerBound - el.height;
+  let random = Math.round((Math.random() * range) + lowerBound);
+  let round = Math.floor(random/10)*10;
+
+  return round;
 }
 
 //
@@ -91,10 +99,10 @@ function GetRandomYCoordinate(el){
 //
 function isCollide(a, b) {
   return !(
-      ((a.y + a.height) < (b.y)) ||
-      (a.y > (b.y + b.height)) ||
-      ((a.x + a.width) < b.x) ||
-      (a.x > (b.x + b.width))
+      ((a.y + a.height) <= (b.y)) ||
+      (a.y >= (b.y + b.height)) ||
+      ((a.x + a.width) <= b.x) ||
+      (a.x >= (b.x + b.width))
   );
 }
 

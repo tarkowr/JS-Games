@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Games | Block</title>
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Muli:200,300,400,600' rel='stylesheet'>
+    
+    <!--Custom Styles-->
+    <link rel="stylesheet" href="css/Block.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <!--Favicon-->
+    <link rel="icon" href="media/icon.png">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <!--Navbar-->
+    <div id="navbar">
+        <a href="./index.html" class="link home">JS Games</a>
+        <a href="./Block.html" class="link">Block</a>
+        <a href="./nbaAnimation.html" class="link">NBA Chase</a>
+        <a href="./Matching.html" class="link">Matching</a>
+        <a href="./settings.html" class="link">Settings</a>
+        <i class="fa fa-bars" id="stack"></i>
+    </div>
+
+    <script src="js/navbar.js"> </script>
+    <script src="js/highScore.js"> </script>
+    <script src="js/Block.js"> </script>
+
+    <div id="game-board">
+
+    </div>
+
+    <div id="select-game-mode">
+        <p id="instruction">Please select a game mode below to begin.</p>
+
+        <button id="startGameEasy" class="styledButton">Easy</button>
+        <button id="startGameHard" class="styledButton">Hard</button>
+        <button id="startGameImpossible" class="styledButton">Impossible</button>
+        <button id="startGameFlappy" class="styledButton">Flappy</button>
+        <button id="exit" class="styledButton" style="display:none; padding: 20px 50px;">Exit</button>
+        <button id="restart" class="styledButton" style="display:none; padding: 20px 50px;">Restart</button>
+    </div>
+</body>
+</html>
