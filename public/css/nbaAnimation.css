@@ -43,3 +43,6 @@ html, body{
     width:928px;
     height: 525px;
 }
+.alert-color{
+    color: #f44242;
+}

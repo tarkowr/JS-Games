@@ -14,6 +14,7 @@ window.addEventListener("load",function(event) {
     let passedObstacles = [];
     let HS;
     let gameMode = GameModes.BlockEasy;
+    let clicked = false;
 
     //
     // Default Settings
@@ -32,6 +33,7 @@ window.addEventListener("load",function(event) {
     let blockDownKey = 3;
 
     let spacePress = -10;
+    let clickCanvas = -50;
     let gravity = .5;
     let gravitySpeed = .1;
 
@@ -234,6 +236,9 @@ window.addEventListener("load",function(event) {
             window.addEventListener('keyup', function (e) {
                 myGameArea.key = false;
             });
+            this.canvas.addEventListener('click', function(e){
+                clicked = true;
+            });
         },
 
         //
@@ -424,22 +429,27 @@ window.addEventListener("load",function(event) {
         //
         // Change game piece Y movement based on arrow keys
         //
-        if(gameMode != GameModes.BlockFlappy){
+        if(gameMode == GameModes.BlockFlappy){
+            if (myGameArea.key && myGameArea.key == GameKeys.SPACE) {
+                myGamePiece.speedY = spacePress;
+                gravity = .5; // Reset gravity
+            }
+            else if (clicked) {
+                gravity = -3;
+                myGamePiece.speedY = gravity;
+                clicked = false;
+            }
+            else {
+                myGamePiece.speedY = gravity; //Apply Gravity
+                gravity = gravity + ((gravity < 0) ? gravitySpeed*1.5 : gravitySpeed); //Add to Gravity Pull Effect
+            }
+        }
+        else{
             if (myGameArea.key && myGameArea.key == GameKeys.UP) {
                 myGamePiece.speedY = blockUpKey; 
             }
             else if (myGameArea.key && myGameArea.key == GameKeys.DOWN) {
                 myGamePiece.speedY = blockDownKey; 
-            }
-        }
-        else{
-            if (myGameArea.key && myGameArea.key == GameKeys.SPACE) {
-                myGamePiece.speedY = spacePress;
-                gravity = .5; //Reset Gravity to Original Pull Effect
-            }
-            else {
-                myGamePiece.speedY = gravity; //Apply Gravity
-                gravity = gravity + gravitySpeed; //Add to Gravity Pull Effect
             }
         }
 
